@@ -4,17 +4,19 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    height: 100vh;
+    width:100vw;
   }
-
-
-
+main {
+    height: 90vh;
+    width:100vw;
+}
 
 .wrapper {
     display:grid;
     grid-template-rows: 1fr 1fr;
     row-gap: 3em;
 }
-
 
 #searchcity {
     font-size: 6em;
@@ -27,7 +29,6 @@ body {
     margin-left: 340px;
 }
 
-
 .searchbar{
     margin-bottom: auto;
     margin-top: auto;
@@ -35,9 +36,7 @@ body {
     background-color: #353b48;
     border-radius: 30px;
     padding: 10px;
-    position: relative;
-    bottom:350px;
-    right: 550px;
+    margin-left: 250px;
     }
 
     .search_input{
@@ -48,7 +47,7 @@ body {
     width: 0;
     caret-color:transparent;
     line-height: 40px;
-    transition: width 0.4s linear;
+    /* transition: width 0.4s linear; */
     }
 
     .searchbar:hover > .search_input{
@@ -80,6 +79,98 @@ body {
         }
 
 
+  @media screen and (max-width:770px){
+            #searchcity {
+                font-size: 5em;
+            }
+            .searchbar{
+                position: relative;
+                right:90px;
+            }
+        }
+
+  @media screen and (max-width:640px) {
+            #searchcity {
+                font-size: 4em;
+            }
+            .searchbar{
+                position: relative;
+                right:150px;
+        }
+    }
+    @media screen and (max-width:612px) {
+        .searchbar{
+            position: relative;
+            right:150px;
+    }
+    .nohover { 
+        display: inline-block;
+        width:200px;
+    }
+    .search_icon {
+        position: relative;
+        bottom: 40px;
+    }
+}
+
+    @media screen and (max-width:530px) {
+        #searchcity {
+            font-size: 3.7em;
+            margin-left: 80px;
+        }
+        .searchbar{
+            position: relative;
+            right:150px;
+    }
+}
+
+@media screen and (max-width:495px) {
+    #searchcity {
+        font-size: 3em;
+        margin-left: 80px;
+    }
+    .searchbar{
+        position: relative;
+        right:180px;
+}
+}
+@media screen and (max-width:429px) {
+    #searchcity {
+        font-size: 2.7em;
+        margin-left: 80px;
+        text-align: center;
+    }
+    .searchbar{
+        position: relative;
+        right:180px;
+}
+}
+@media screen and (max-width:387px) {
+    #searchcity {
+        font-size: 2.3em;
+        margin-left: 80px;
+    }
+    .searchbar{
+        position: relative;
+        right:210px;
+}
+.nohover { 
+    display: inline-block;
+    width:20px;
+}
+.search_icon {
+    position: relative;
+    bottom: 40px;
+}
+}
 
 
-  
+#about {
+    background: url("https://blog.virginatlantic.com/wp-content/uploads/2012/06/Early-morning-fog-over-the-Golden-Gate-Bridge-%C2%A9-Shutterstock-1500x650.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height:100vh;
+    width: 100vw;
+}
