@@ -166,7 +166,7 @@ main {
 
 
 #about {
-    background: url("https://blog.virginatlantic.com/wp-content/uploads/2012/06/Early-morning-fog-over-the-Golden-Gate-Bridge-%C2%A9-Shutterstock-1500x650.jpg");
+    background: url("https://upload.wikimedia.org/wikipedia/commons/1/19/Golden_gate_bridge_at_sunset.JPG");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -174,3 +174,4 @@ main {
     height:100vh;
     width: 100vw;
 }
+
