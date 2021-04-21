@@ -1,79 +1,32 @@
-let searchCity = document.getElementById("clicksearch");
+let form = document.getElementById("form")
+let scrolldown = document.getElementById("scrolldown")
+let searchbar = document.getElementById("searchbar")
+let newdiv = document.getElementById("scrolldown")
 
-searchCity.addEventListener("click", function (){
-    
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    newdiv.classList.add("color")
+})
+newdiv.addEventListener('click', () => {
+    newdiv.classList.remove("color")
+})
+
+let buttonweather = document.getElementById("weather");
+let cityName = document.querySelector(".cityname");
+let weatherbody = document.querySelector(".weatherbody");
+
+buttonweather.addEventListener('click', () => {
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + searchbar.value + '&appid=511e5f562c46dbf8c9d1f7f4f971974e')
+        .then(response => response.json())
+        .then(data => {
+            let cityValue = data['name'];
+            let tempValue = data['main']['temp'];
+            let descValue = data['weather'][0]['description']
+            cityName.innerHTML = cityValue;
+            weatherbody.innerHTML = "<b>Weather:</b> " + tempValue + " | " + "<b>Sky Condition:</b> " + descValue;
+        })
+        .catch(err => alert("Please put it in a valid city name" + err))
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const api = {
-//     key: "82dd0a3b42ae69ea6b3d9a1ab89d3acf",
-//     base: "https://api.openweathermap.org/data/2.5/"
-// }
-
-// const searchbox = document.querySelector('.searchbar');
-// searchbox.addEventListener('keypress', setQuery);
-
-// function setQuery(evt) {
-//     if (evt.keyCode == 13) {
-//         getResults(searchbox.value);
-//     }
-// }
-
-// function getResults(query) {
-//     fetch(`${api.base}weather?q=${query}&units=imperial&APPID=${api.key}`)
-//         .then(weather => {
-//             return weather.json()
-//         }).then(displayResults);
-// }
-
-// function displayResults(weather) {
-//     let city = document.querySelector('.location .city');
-//     city.innerText = `${weather.name}, ${weather.sys.country}`;
-
-//     let now = new Date();
-//     let date = document.querySelector('.location .date');
-//     date.innerText = dateBuilder(now);
-
-//     let temp = document.querySelector('.current .temp');
-//     temp.innerHTML = `${Math.round(weather.main.temp)}<span>°F</span>`;
-
-//     let weather_el = document.querySelector('.current .weather');
-//     weather_el.innerText = weather.weather[0].main;
-
-//     let hilow = document.querySelector('.hi-low');
-//     hilow.innerText = `${Math.round(weather.main.temp_min)}°F / ${Math.round(weather.main.temp_max)}°F`;
-// }
-
-// function dateBuilder(d) {
-//     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-//     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-//     let day = days[d.getDay()];
-//     let date = d.getDate();
-//     let month = months[d.getMonth()];
-//     let year = d.getFullYear();
-
-//     return `${day} ${date} ${month} ${year}`;
-// }

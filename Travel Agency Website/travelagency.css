@@ -1,3 +1,5 @@
+
+
 body {
     background: url("https://wallpaperaccess.com/full/254361.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -175,3 +177,95 @@ main {
     width: 100vw;
 }
 
+.sec2h1 {
+    margin-top: 100px;
+}
+
+#scrolldown {
+    height: 80px;
+    width: 60px;
+    position:absolute;
+    left: 50%;
+    bottom: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color::before,
+.color::after {
+    content: '';
+    position:absolute;
+    top: 20%;
+    left:50%;
+    border: 3px solid white;
+    height:20px;
+    width: 20px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scrolldown 1s ease-in-out infinite;
+}
+.color::after {
+    top: 30%;
+    animation-delay: .2s;
+}
+
+@keyframes scrolldown {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top:90%
+    }
+}
+
+.weather1 {
+    position: relative;
+    top: 50px;
+    left: 470px;
+    width:50%;
+    max-width: 80%;
+    height:700px;
+    transform: translate(-50%), -50%;
+    border: 3px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color:rgb(245, 245, 245);
+}
+
+
+.weatherheader{
+    padding: 10px 15px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.weatherheader .cityname {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.weatherheader .closebutton {
+    cursor: pointer;
+    border:none;
+    outline:none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.weatherbody {
+    padding:10px 15px;
+}
+
+.cityname{
+    
+}
