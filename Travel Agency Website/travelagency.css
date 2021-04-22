@@ -224,33 +224,50 @@ main {
         top:90%
     }
 }
+.containerweather {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+
+.sec2h1 {
+    position: relative;
+    top: 30px;
+}
 
 .weather1{
-    position: relative;
-    top: 50px;
-    left: 470px;
-    width:50%;
-    max-width: 80%;
-    height:700px;
+    display: flex;
+    width:55rem;
+    /* max-width: 80%; */
+    height:40rem;
     transform: translate(-50%), -50%;
-    border: 3px solid rgb(213, 213, 213);
-    border-radius: 10px;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    box-shadow: 0 30px 30px 0 rgba(0,0,0,.2);
+    border-radius: 15px;
     z-index: 10;
-    background-color:rgb(0, 0, 0);
-    color: white;
+    color: black;
+    background-color: rgb(220,220,220);
+    display:none;
+
 }
 
 
 .weatherheader{
-    padding: 10px 15px;
+    padding: 10px 20px;
     display:flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid black;
+    opacity: 1;
 }
 .weatherheader .cityname {
     font-size: 2rem;
     font-weight: bold;
+    color: rgb(255, 139, 50);
+    opacity: 1;
 }
 
 .weatherheader .closebutton {
@@ -264,6 +281,7 @@ main {
 
 .weatherbody {
     padding:10px 15px;
+    opacity: 1;
 }
 
 
@@ -271,6 +289,7 @@ main {
     font-size: 8rem;
     font-weight: 800;
     text-shadow: 2px 5px rgba(0,0,0,0.65);
+    opacity: 1;
 }
 
 .weatherbody .forecast {
@@ -280,9 +299,17 @@ main {
     margin-top: 20px;
     text-shadow: 0px 3px rgba (0,0,0,0.4);
 }
+
+.date {
+    color: rgb(255, 139, 50);
+    font-size: 2rem;
+}
+
+
 .temp span {
 font-weight: 300;
 font-size: 8rem;
+opacity: 1;
 }
 
 .weatherbody .hilow {
@@ -291,4 +318,5 @@ font-size: 8rem;
     text-shadow: 0px 3px rgba (0,0,0,0.4);
     position: relative;
     top: 100px;
+    opacity: 1;
 }

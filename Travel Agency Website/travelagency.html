@@ -80,25 +80,27 @@
     <section class="about-section text-center" id="about">
         <h1 class="text-light mt-5 sec2h1">What do you want to know?</h1>
         <br>
-        <button id="weather" type="button" class="btn btn-outline-dark waves-effect"><i class="fas fa-sun pr-2"
+        <button id="weather" type="button" class="btn btn-outline-light waves-effect"><i class="fas fa-sun pr-2"
                 aria-hidden="true"></i> Weather</button>
         <button id="covid" type="button" class="btn btn-outline-dark waves-effect"><i class="fas fa-allergies"
                 aria-hidden="true"></i> Covid Status</button>
-        <button id="tourist" type="button" class="btn btn-outline-dark waves-effect"><i class="fas fa-eye"
+        <button id="tourist" type="button" class="btn btn-outline-light waves-effect"><i class="fas fa-eye"
                 aria-hidden="true"></i> Tourist Spot</button>
         <button id="ticket" type="button" class="btn btn-outline-dark waves-effect"><i class="fas fa-ticket-alt"
                 aria-hidden="true"></i> Plane Tickets</button>
-        <div class="weather1" id="weather1">
-            <div class="weatherheader">
-                <div class="cityname"></div>
-                <h3 class="date"></h3>
-            </div>
+        <div class="containerweather">
+            <div style="background-color: rgba(220,220,220, 0.8)" class="weather1" id="weather1">
+                <div class="weatherheader">
+                    <div class="cityname"></div>
+                    <div class="date"> </div>
+                </div>
 
-            <div class="weatherbody">
-                <div class="temp"></div>
-                <div class="forecast"></div>
-                <img class="weathericon" src="" alt="">
-                <div class="hilow"></div>
+                <div class="weatherbody">
+                    <div class="temp"></div>
+                    <div class="forecast"></div>
+                    <img class="weathericon" src="" alt="">
+                    <div class="hilow"></div>
+                </div>
             </div>
         </div>
         <!-- <div id="overlay"></div> -->
